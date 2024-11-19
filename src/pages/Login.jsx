@@ -1,3 +1,7 @@
+import { MdHome } from "react-icons/md"
+import { FaLockOpen } from "react-icons/fa"
+import { IoIosContact } from "react-icons/io"
+
 export default function Login() {
 
   return (
@@ -6,17 +10,35 @@ export default function Login() {
 
       <div className="w-[80%] h-[80%] rounded-xl flex justify-center items-center overflow-hidden shadow-2xl">  
 
-        <div className="w-[40%] h-full bg-gray-200">
+        <div className="w-[40%] h-full bg-gray-200 flex justify-center items-center flex-col gap-20">
 
-          <button>
+          <button
+            className="w-full h-full max-w-[300px] max-h-[60px] rounded-[50px] flex justify-center items-center gap-[10px] text-[20px] shadow-xl hover:shadow-none hover:bg-gray-300 transition-all duration-300"
+            style={{ 
+              border: '2px solid black'
+            }}
+          >
+            <MdHome className="text-[30px]" />
             Back home
           </button>
 
-          <button>
+          <button
+            className="w-full h-full max-w-[300px] max-h-[60px] rounded-[50px] flex justify-center items-center gap-[10px] text-[20px] shadow-xl hover:shadow-none hover:bg-gray-300 transition-all duration-300"
+            style={{ 
+              border: '2px solid black'
+            }}
+          >
+            <FaLockOpen className="text-[30px]" />
             Open Login
           </button>
 
-          <button>
+          <button
+            className="w-full h-full max-w-[300px] max-h-[60px] rounded-[50px] flex justify-center items-center gap-[10px] text-[20px] shadow-xl hover:shadow-none hover:bg-gray-300 transition-all duration-300"
+            style={{ 
+              border: '2px solid black'
+            }}
+          >
+            <IoIosContact className="text-[30px]" />
             Contact Page
           </button>
 
