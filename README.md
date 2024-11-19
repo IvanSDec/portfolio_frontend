@@ -1,8 +1,15 @@
-# React + Vite
+## PORFOLIO ##
+Portafolio frontend diseñado y desarrollado por:
+    - Iván A. Sánchez Carrillo
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## TECNOLOGIAS ##
+    - React (vite) - Frontend
+    - Modelo vista controllador - Arquitectura
+    - Preparado para despliegue en AWS
 
-Currently, two official plugins are available:
-
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## INSTRUCCIONES ## 
+    // FRONTEND //
+    npm install
+    npm run dev (para desarrollo)
+    npm run build (para producción)
+    npm run start (para producción)
