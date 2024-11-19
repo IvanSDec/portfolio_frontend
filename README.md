@@ -1,4 +1,4 @@
-## PORFOLIO ##
+## PORFOLIO FRONTEND ##
 Portafolio frontend diseñado y desarrollado por:
     - Iván A. Sánchez Carrillo
 
