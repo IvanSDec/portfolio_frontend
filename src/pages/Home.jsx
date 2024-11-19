@@ -16,7 +16,7 @@ export default function Home() {
 
   return (
 
-    <div className="">  
+    <div className="w-full h-auto bg-blue-300">  
       <h1 className="">Hi!</h1> 
       <h1 className="">I'm Iván Sánchez</h1> 
       <ul>
