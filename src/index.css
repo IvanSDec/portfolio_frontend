@@ -26,3 +26,11 @@ button {
     box-shadow: none; 
     cursor: pointer; 
 }
+
+.navbar {
+    transition: width 0.3s ease, opacity 0.3s ease;
+}
+  
+.navbar-content {
+    transition: opacity 0.3s ease;
+}   

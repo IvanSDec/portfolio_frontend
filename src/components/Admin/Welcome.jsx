@@ -1,0 +1,17 @@
+import Permissions from "./Welcome/Permissions"
+
+export default function WelcomeAdmin () {
+
+    return(
+
+        <div className="mx-[120px] w-[calc(100%-200px)] bg-white rounded-md p-[40px] h-[96vh]">
+            
+            <h1 className="text-2xl ">Hola de nuevo, <span className="font-bold">Admin.</span> </h1>
+
+            <Permissions />
+
+        </div>
+
+    )
+
+}
