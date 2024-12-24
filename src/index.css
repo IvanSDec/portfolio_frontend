@@ -28,9 +28,15 @@ button {
 }
 
 .navbar {
+    z-index: 99;
     transition: width 0.3s ease, opacity 0.3s ease;
 }
   
 .navbar-content {
+    z-index: 99;
     transition: opacity 0.3s ease;
-}   
+} 
+
+.welcome_admin{
+    background-image: url(https://cdn.pixabay.com/photo/2015/09/28/19/48/wallpaper-962590_1280.png);
+}
