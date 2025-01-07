@@ -40,3 +40,37 @@ button {
 .welcome_admin{
     background-image: url(https://cdn.pixabay.com/photo/2015/09/28/19/48/wallpaper-962590_1280.png);
 }
+
+.skill-item {
+    cursor: pointer;
+    max-width: 150px;
+    height: 30px;
+    border: solid 2px #fbbf24;
+    border-radius: 9999px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-left: 8px;
+    padding-right: 8px;
+    color: #fbbf24;
+    overflow: hidden;
+    white-space: nowrap;
+}
+
+.skill-item:hover .scrolling-text {
+    animation: scroll-text 2s linear infinite; 
+    padding-left: 100%;
+}
+
+.scrolling-text {
+    display: inline-block;
+}
+
+@keyframes scroll-text {
+    0% {
+        transform: translateX(100%);
+    }
+    100% {
+        transform: translateX(-100%);
+    }
+}

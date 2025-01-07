@@ -5,9 +5,9 @@ export default function Permissions () {
 
     return(
 
-        <div className="mt-[50px] w-[350px] h-auto border-solid border-2 border-gray-400 rounded-md p-[25px]">
+        <div className="mt-[50px] w-[350px] max-h-[250px] h-auto border-solid border-2 border-gray-400 rounded-md p-[25px]">
 
-            <h2 className="text-xl mb-[40px]">Permisos del perfil</h2>
+            <h2 className="text-xl mb-[40px] font-bold">Permisos del perfil</h2>
             
             <div className="flex justify-between items-center gap-5 mt-[10px] w-[280px]">
                 Edicion de Proyectos
@@ -28,6 +28,7 @@ export default function Permissions () {
                 Acceso a todos los modulos
                 <MdVerified className="text-green-600 text-2xl" />
             </div>
+            
         </div>
 
     )
