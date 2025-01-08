@@ -26,7 +26,7 @@ export default function BannerHome() {
                 backgroundPosition: 'center' 
             }}
         >
-            <div className='absolute w-full h-full bg-black top-0 left-0 opacity-[0.6]'></div>
+            <div className='absolute w-full h-full top-0 left-0 opacity-[0.5] bg-black'></div>
 
             <div className="z-10 relative bottom-0 text-center md:text-left mt-[50px] w-full">
                 <h1 className="text-white md:text-[80px] font-bebas text-[40px] mt-[10px] w-full">{`DESARROLLADOR WEB`}</h1>
