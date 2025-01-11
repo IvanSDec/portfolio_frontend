@@ -1,4 +1,8 @@
-const skills = ['React', 'Python', 'Node', 'Github', 'Blender', 'React', 'Python', 'Node', 'Github', 'Blender','React', 'Python', 'Node', 'Github', 'Blender'];
+const skills = [
+    'React', 'Python', 'Node', 'Github', 'Blender', 'HTML', 'CSS', 'SASS', 'AWS',
+    'DJANGO', 'Sequelize', 'SQL Server', 'Postgres', 'MySQL', 'GIT', 'Jira', 'Adobe XD', 
+    'Libreria Office', 'Figma', 'Trello'
+];
 
 export default function InformationHome() {
     const randomDelay = () => `${Math.random() * 3 + 1}s`;
@@ -33,7 +37,7 @@ export default function InformationHome() {
                         className="skill-item"
                         style={{ animationDelay: randomDelay() }}
                     >
-                        <span className="scrolling-text">{skill}</span>
+                        <span className="scrolling-text font-jura">{skill}</span>
                     </div>
                 ))}
 
