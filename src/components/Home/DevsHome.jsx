@@ -1,5 +1,5 @@
 import React, { useEffect } from 'react';
-import EmblaCarouselParallax from './HomeCarrousel';
+import EmblaCarouselParallax from './CarrouselHome';
 
 export default function DevsHome () {   
     const slides = [

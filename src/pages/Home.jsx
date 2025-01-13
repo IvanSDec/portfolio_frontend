@@ -2,6 +2,7 @@ import BannerHome from "../components/Home/BannerHome"
 import InformationHome from "../components/Home/InformationHome"
 import DevsHome from "../components/Home/DevsHome"
 import ModelHome from "../components/Home/ModelHome"
+import AnimationsHome from "../components/Home/AnimationsHome"
 
 export default function Home() {
 
@@ -12,6 +13,7 @@ export default function Home() {
 			<InformationHome />
 			<DevsHome />
 			<ModelHome />
+			<AnimationsHome />
 		</div>
 
 	)

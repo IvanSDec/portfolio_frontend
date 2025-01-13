@@ -42,9 +42,9 @@ export default function Menu() {
                         className='w-full h-full object-cover'
                     />
                 </div>
-                <h3 className="text-black text-md font-jura font-bold">Iván S. Carrillo</h3> 
+                <h3 className="text-black text-md font-jura font-bold">IVÁN S. CARRILLO</h3> 
                 <h3 className="text-black text-xl font-jura font-bold"> | </h3>
-                <h3 className="text-black text-md font-jura font-extrabold"> DEVELOPER & 3D ARTIST </h3>
+                <h3 className="text-black text-md font-jura font-extrabold"> WEB DEVELOPER & 3D ARTIST </h3>
             </div>
 
             <div className='flex justify-center items-center gap-[20px]'>
@@ -52,9 +52,7 @@ export default function Menu() {
                 <h3 className="text-black text-xl font-jura font-bold"> | </h3>
                 <a href="/dev" className={`text-xl font-jura font-bold ${isActive('/dev')}`}>DESARROLLOS</a>
                 <h3 className="text-black text-xl font-jura font-bold"> | </h3>
-                <a href="/models" className={`text-xl font-jura font-bold ${isActive('/models')}`}>MODELADOS</a>
-                <h3 className="text-black text-xl font-jura font-bold"> | </h3>
-                <a href="/login" className={`text-xl font-jura font-bold ${isActive('/login')}`}>ADMIN</a>
+                <a href="/models" className={`text-xl font-jura font-bold ${isActive('/models')}`}>ARTE 3D</a>
             </div>
             
         </div>

@@ -1,4 +1,4 @@
-import EmblaCarousel from './HomeCarrouselTwo';
+import EmblaCarousel from './CarrouselTwoHome';
 
 export default function ModelHome () {
     const slides = [
