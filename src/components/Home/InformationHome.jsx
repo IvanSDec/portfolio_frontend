@@ -1,24 +1,25 @@
+import { BackgroundGray, TextGolden, TextWhite } from "../Global/Colors"
+
 const skills = [
     'React', 'Python', 'Node', 'Github', 'Blender', 'HTML', 'CSS', 'SASS', 'AWS',
     'DJANGO', 'Sequelize', 'SQL Server', 'Postgres', 'MySQL', 'GIT', 'Jira', 'Adobe XD', 
     'Libreria Office', 'Figma', 'Trello'
-];
+]
 
 export default function InformationHome() {
-    const randomDelay = () => `${Math.random() * 3 + 1}s`;
+    const randomDelay = () => `${Math.random() * 3 + 1}s`
     
 	return (
 		
-		<div className="w-full min-h-[100vh] bg-[#3d3d3d] p-[20px] md:p-[70px] md:flex md:items-start md:justify-between">	
+		<div className={`w-full min-h-[100vh] p-[20px] md:p-[70px] md:flex md:items-start md:justify-between ${BackgroundGray}`}>	
 
             <div className="w-full md:w-1/2 h-auto md:h-full">
 
-                <div className="w-full h-auto max-w-[600px] mr-0">
-                    <h2 className="text-yellow-500 text-[40px] md:text-[60px] mb-14 font-bebas w-full ">Hola, yo soy Iván S. Carrillo</h2>
-                    <p className="text-white text-md mb-4 font-jura max-w-[500px]"><span className="font-bold">Desarrollador Web Fullstack y artista 3D</span>, tengo una gran pasión por la tecnología en general, lo que provocó mi gusto y fascinación por el desarrollo de aplicaciones web y modelado 3D.</p>
-                    <p className="text-white text-md mb-4 font-jura max-w-[500px]">Mi compromiso y trabajo me han llevado a colaborar en distintas empresas a lo largo de mi carrera profesional, donde he aprendido diversas tecnologías y metodologías de trabajo.</p>
-                    <p className="text-white text-md mb-4 font-jura max-w-[500px]">He participado en diferentes proyectos, siempre aportando con profesionalismo y una gran empatía para apoyar a los equipos de trabajo.</p>
-                    <p className="text-white text-md mb-14 font-jura max-w-[500px]">Me gusta emprender, y los trabajos de tipo freelancer son mi especialidad.</p>
+                <div className="w-full h-auto md:max-w-[600px] mr-0">
+                    <h2 className={`${TextGolden} text-[40px] md:text-[60px] mb-14 font-bebas w-full text-center md:text-start`}>Hola, mi nombre es Iván Sánchez Carrillo</h2>
+                    <p className={`${TextWhite} text-md mb-4 font-jura md:max-w-[500px] text-center md:text-start`}><span className="font-bold">Desarrollador Web Fullstack y artista 3D</span>, tengo una gran pasión por la tecnología en general, lo que provocó mi gusto y fascinación por el desarrollo de aplicaciones web y modelado 3D.</p>
+                    <p className={`${TextWhite} text-md mb-4 font-jura md:max-w-[500px] text-center md:text-start`}>Mi compromiso y trabajo me han llevado a colaborar en distintas empresas a lo largo de mi carrera profesional, donde he aprendido diversas tecnologías y metodologías de trabajo.</p>
+                    <p className={`${TextWhite} text-md mb-4 font-jura md:max-w-[500px] text-center md:text-start`}>He participado en diferentes proyectos, siempre aportando con profesionalismo y una gran empatía para apoyar a los equipos de trabajo.</p>
                 </div>
 
             </div>

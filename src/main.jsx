@@ -11,6 +11,9 @@ import store from './redux/store'
 import './index.css'
 import Menu from './components/layout/menu'
 import Footer from './components/layout/footer'
+import Devs from './pages/Devs'
+import Art from './pages/Art'
+import Cv from './pages/Cv'
 
 const Layout = () => (
 
@@ -34,6 +37,9 @@ root.render(
 
 				<Route path="/" element={<Layout />}>
 					<Route index element={<Home />} />
+					<Route path="/devs" element={<Devs />} />
+					<Route path="/art" element={<Art />} />
+					<Route path="/cv" element={<Cv />} />
 				</Route>
 
 				<Route path="/about" element={<About />} />

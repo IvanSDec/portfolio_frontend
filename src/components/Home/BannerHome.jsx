@@ -1,22 +1,24 @@
-import React, { useEffect } from 'react';
+import React, { useEffect } from 'react'
+import { Link } from 'react-router-dom'
+import { TextGolden, TextWhite, BorderGolden, BackgroundGoldenLigth } from '../Global/Colors'
+import Blackout from './GlobalHome/Blackout'
 
 export default function BannerHome() {
 
     useEffect(() => {
         const handleScroll = () => {
-            const scrollY = window.scrollY;
-            const banner = document.getElementById('banner');
-            banner.style.backgroundPosition = `center ${scrollY * 0.6}px`;
+            const scrollY = window.scrollY
+            const banner = document.getElementById('banner')
+            banner.style.backgroundPosition = `center ${scrollY * 0.6}px`
         }
-
-        window.addEventListener('scroll', handleScroll);
-
+        window.addEventListener('scroll', handleScroll)
         return () => {
-            window.removeEventListener('scroll', handleScroll);
-        };
-    }, []);
+            window.removeEventListener('scroll', handleScroll)
+        }
+    }, [])
 
     return (
+
         <div 
             id="banner" 
             className="relative w-full min-h-[100vh] p-10" 
@@ -26,12 +28,24 @@ export default function BannerHome() {
                 backgroundPosition: 'center' 
             }}
         >
-            <div className='absolute w-full h-full top-0 left-0 opacity-[0.5] bg-black'></div>
+
+            <Blackout />
 
             <div className="z-10 relative bottom-0 text-center md:text-left mt-[50px] w-full">
-                <h1 className="text-white md:text-[80px] font-bebas text-[50px] mt-[10px] w-full">{`DESARROLLADOR WEB`}</h1>
-                <h1 className="text-white md:text-[80px] font-bebas text-[50px] mt-[10px] w-full">{`& ARTISTA 3D`}</h1>
+                <h1 className={`${TextWhite} md:text-[80px] font-bebas text-[50px] mt-[10px] w-full`}>{`DESARROLLADOR WEB`}</h1>
+                <h1 className={`${TextWhite} md:text-[80px] font-bebas text-[50px] mt-[10px] w-full`}>{`& ARTISTA 3D`}</h1>
             </div>
+
+            <div className='relative transform md:absolute md:bottom-[200px] md:right-[250px] w-full md:w-fit flex justify-center items-center'>
+                <Link to='/cv'>
+                    <div class={`${TextGolden} ${BorderGolden} ${BackgroundGoldenLigth} text-center mt-[200px] md:mt-0 text-lg md:text-2xl border-2 border-solid w-fit rounded-xl px-7 py-2`}>
+                        ¡ Conóceme !
+                    </div>
+                </Link>
+            </div>
+
         </div>
-    );
+
+    )
+
 }

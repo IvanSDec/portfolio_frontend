@@ -1,11 +1,52 @@
+import { BackgroundGray } from "../Global/Colors"
+import { FaInstagram } from "react-icons/fa"
+import { CiFacebook } from "react-icons/ci"
+import { FaSquareXTwitter } from "react-icons/fa6"
+import { Link } from 'react-router-dom'
+
 export default function Footer () {
     
     return(
 
-        <div className="w-full min-h-[50vh] bg-[#3d3d3d] p-[20px] md:p-[70px] relative">
-            <h3 className="text-white text-xl">I</h3>
+        <footer className={` text-white text-center p-6 ${BackgroundGray}`}>
 
-        </div>
+            <div className="container mx-auto">
+                
+                <p className="text-lg font-semibold">© 2024 Iván Sánchez — Modelado y Desarrollo</p>
+                
+                <div className="flex justify-center gap-4 mt-3">
+
+                    <Link 
+                        to={'https://www.instagram.com/ivanscarrillomx/'}
+                        target="_blank" 
+                        rel="noopener noreferrer"
+                    >
+                        <FaInstagram className="text-white text-2xl" />
+                    </Link>
+
+                    <Link 
+                        to={'https://www.facebook.com/profile.php?id=100001168921982'}
+                        target="_blank" 
+                        rel="noopener noreferrer"
+                    >
+                        <CiFacebook className="text-white text-2xl" />
+                    </Link>
+
+                    <Link 
+                        to={'https://x.com/IvnSnch64591889'}
+                        target="_blank" 
+                        rel="noopener noreferrer"
+                    >
+                        <FaSquareXTwitter className="text-white text-2xl" />
+                    </Link>
+                    
+                </div>
+                
+                <p className="mt-3 text-sm opacity-70">Construyendo soluciones con tecnología y eficiencia.</p>
+
+            </div>
+
+        </footer>
 
     )
 
