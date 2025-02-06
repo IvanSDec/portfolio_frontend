@@ -49,9 +49,9 @@
     configuradas las credenciales de AWS y sigue las instrucciones de despliegue 
     en la documentación oficial de AWS.
 
-## Contacto
-    Si tienes alguna duda o sugerencia, no dudes en contactarme:
-[![Instagram](https://img.shields.io/badge/Instagram-E4405F?style=for-the-badge&logo=instagram&logoColor=white)](https://www.instagram.com/ivanscarrillomx/)
+> [!IMPORTANT]
+>   Si tienes alguna duda o sugerencia, no dudes en contactarme:
+>   [![Instagram](https://img.shields.io/badge/Instagram-E4405F?style=for-the-badge&logo=instagram&logoColor=white)](https://www.instagram.com/ivanscarrillomx/)
 
 ## Licencia
     Este proyecto está bajo la licencia GNU.
