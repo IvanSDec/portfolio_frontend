@@ -5,9 +5,10 @@
 >   Iván A. Sánchez Carrillo
 
 ## Descripción  
-    Este proyecto es un portfolio personal diseñado para mostrar mis habilidades en desarrollo web y modelado 3D. 
-    El sitio es autoadministrable, lo que permite modificar proyectos, descripciones y la hoja de vida directamente 
-    desde una interfaz de usuario intuitiva, sin necesidad de realizar cambios en el código fuente.
+    Este proyecto es un portfolio personal diseñado para mostrar mis habilidades en 
+    desarrollo web y modelado 3D. El sitio es autoadministrable, lo que permite 
+    modificar proyectos, descripciones y la hoja de vida directamente desde una interfaz 
+    de usuario intuitiva, sin necesidad de realizar cambios en el código fuente.
 
 ## Características principales
 - **Interfaz intuitiva:** Permite la administración de contenido sin necesidad de conocimientos técnicos.
