@@ -7,9 +7,8 @@ Portafolio frontend diseñado y desarrollado por:
     - Modelo vista controllador - Arquitectura
     - Preparado para despliegue en AWS
 
-## INSTRUCCIONES ## 
-    // FRONTEND //
-    npm install
-    npm run dev (para desarrollo)
-    npm run build (para producción)
-    npm run start (para producción)
+> .[!TIP]
+    > npm install
+    > npm run dev (para desarrollo)
+    > npm run build (para producción)
+    > npm run start (para producción)
