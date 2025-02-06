@@ -5,7 +5,9 @@
 >   Iván A. Sánchez Carrillo
 
 ## Descripción  
-    Este proyecto es un portfolio personal diseñado para mostrar mis habilidades en desarrollo web y modelado 3D. El sitio es autoadministrable, lo que permite modificar proyectos, descripciones y la hoja de vida directamente desde una interfaz de usuario intuitiva, sin necesidad de realizar cambios en el código fuente.
+    Este proyecto es un portfolio personal diseñado para mostrar mis habilidades en desarrollo web y modelado 3D. 
+    El sitio es autoadministrable, lo que permite modificar proyectos, descripciones y la hoja de vida directamente 
+    desde una interfaz de usuario intuitiva, sin necesidad de realizar cambios en el código fuente.
 
 ## Características principales
 - **Interfaz intuitiva:** Permite la administración de contenido sin necesidad de conocimientos técnicos.
@@ -14,9 +16,9 @@
 - **Preparado para despliegue en AWS:** Listo para ser desplegado en la nube con Amazon Web Services.
 
 ## Tecnologías utilizadas
-    - **Frontend:** React (Vite)
-    - **Arquitectura:** Modelo Vista Controlador (MVC)
-    - **Despliegue:** Preparado para AWS (Amazon Web Services)
+- **Frontend:** React (Vite)
+- **Arquitectura:** Modelo Vista Controlador (MVC)
+- **Despliegue:** Preparado para AWS (Amazon Web Services)
 
 ## Instalación
     Sigue estos pasos para configurar el proyecto en tu entorno local:
@@ -26,13 +28,22 @@
    git clone https://github.com/tu-usuario/tu-repositorio.git
 
 2. Instala las dependencias:
-    ```npm install
+    ```bash
+    npm install
 
 3. Ejecuta el servidor de desarrollo:
-    ```npm run dev
+    ```bash
+    npm run dev
 
 4. Para compilar el proyecto para producción:
-    ```npm run build
+    ```bash
+    npm run build
 
 5. Para iniciar el servidor en producción
-   ```npm run start
+   ```bash
+   npm run start
+
+## Despliegue
+    El proyecto está configurado para ser desplegado en AWS. Asegúrate de tener 
+    configuradas las credenciales de AWS y sigue las instrucciones de despliegue 
+    en la documentación oficial de AWS.
