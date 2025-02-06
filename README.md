@@ -1,6 +1,8 @@
 ## PORFOLIO FRONTEND ##
-Portafolio frontend diseñado y desarrollado por:
-    - Iván A. Sánchez Carrillo
+
+> [!IMPORTANT]
+>   Diseñado y desarrollado por:
+>   Iván A. Sánchez Carrillo
 
 ## TECNOLOGIAS ##
     > React (vite) - Frontend
@@ -15,3 +17,4 @@ Portafolio frontend diseñado y desarrollado por:
 
 > [!TIP]
 >   Si tienes alguna duda contactame
+>   https://www.instagram.com/ivanscarrillomx/
