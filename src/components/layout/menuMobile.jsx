@@ -6,6 +6,6 @@ export default function MenuMobile () {
 
         </div>
 
-    )
+    );
 
-}
+};

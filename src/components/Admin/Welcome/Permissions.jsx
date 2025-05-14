@@ -1,5 +1,5 @@
-import { MdDoNotDisturbOn } from "react-icons/md"
-import { MdVerified } from "react-icons/md"
+import { MdDoNotDisturbOn } from "react-icons/md";
+import { MdVerified } from "react-icons/md";
 
 export default function Permissions () {
 
@@ -31,6 +31,6 @@ export default function Permissions () {
             
         </div>
 
-    )
+    );
 
-}
+};

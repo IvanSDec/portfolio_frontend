@@ -6,6 +6,6 @@ export default function Cv () {
             <h3 className="text-2xl">Curriculum</h3>
         </div>
 
-    )
+    );
 
-}
+};

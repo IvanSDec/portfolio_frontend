@@ -11,6 +11,6 @@ export default function LinkHome ({ rute, title, color }) {
             </Link>
         </div>
 
-    )
+    );
 
-}
+};

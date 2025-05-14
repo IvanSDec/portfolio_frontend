@@ -10,25 +10,25 @@ import { IoMenu } from "react-icons/io5";
 import { IoIosHome } from "react-icons/io";
 
 export default function NavBar() {
-	const principal = useSelector((state) => state.principal)
-	const dispatch = useDispatch()
-	const navRef = useRef(null)
+	const principal = useSelector((state) => state.principal);
+	const dispatch = useDispatch();
+	const navRef = useRef(null);
 
 	useEffect(() => {
 
 		const handleClickOutside = (event) => {
 			if (navRef.current && !navRef.current.contains(event.target)) {
-				dispatch(setOpen(true))
-			}
-		}
+				dispatch(setOpen(true));
+			};
+		};
 
-		document.addEventListener("click", handleClickOutside)
+		document.addEventListener("click", handleClickOutside);
 
 		return () => {
-			document.removeEventListener("click", handleClickOutside)
-		}
+			document.removeEventListener("click", handleClickOutside);
+		};
 
-	}, [dispatch])
+	}, [dispatch]);
 
 	return (
 
@@ -102,6 +102,6 @@ export default function NavBar() {
 
 		</div>
 
-	)
+	);
 
-} 
+};

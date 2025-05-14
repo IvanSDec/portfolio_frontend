@@ -1,8 +1,8 @@
-import { BackgroundGray } from "../Global/Colors"
-import { FaInstagram } from "react-icons/fa"
-import { CiFacebook } from "react-icons/ci"
-import { FaSquareXTwitter } from "react-icons/fa6"
-import { Link } from 'react-router-dom'
+import { BackgroundGray } from "../Global/Colors";
+import { FaInstagram } from "react-icons/fa";
+import { CiFacebook } from "react-icons/ci";
+import { FaSquareXTwitter } from "react-icons/fa6";
+import { Link } from 'react-router-dom';
 
 export default function Footer () {
     
@@ -12,7 +12,7 @@ export default function Footer () {
 
             <div className="container mx-auto">
                 
-                <p className="text-lg font-semibold">© 2024 Iván Sánchez — Modelado y Desarrollo</p>
+                <p className="text-lg font-semibold">© 2025 Iván Sánchez — Desarrollo y Modelado</p>
                 
                 <div className="flex justify-center gap-4 mt-3">
 
@@ -48,6 +48,6 @@ export default function Footer () {
 
         </footer>
 
-    )
+    );
 
-}
+};

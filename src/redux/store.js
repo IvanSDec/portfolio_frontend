@@ -2,9 +2,9 @@ import { configureStore } from '@reduxjs/toolkit';
 import principalSlice from './principalSlice';
 
 const store = configureStore({
-  reducer: {
-    principal: principalSlice, 
-  },
+	reducer: {
+		principal: principalSlice, 
+	},
 });
 
 export default store;

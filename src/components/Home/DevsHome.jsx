@@ -1,21 +1,21 @@
-import React, { useEffect } from 'react'
-import LinkHome from './GlobalHome/LinkHome'
-import { TextWhite } from '../Global/Colors'
-import Blackout from './GlobalHome/Blackout'
+import React, { useEffect } from 'react';
+import LinkHome from './GlobalHome/LinkHome';
+import { TextWhite } from '../Global/Colors';
+import Blackout from './GlobalHome/Blackout';
 
 export default function DevsHome () {   
 
     useEffect(() => {
         const handleScroll = () => {
-            const scrollY = window.scrollY
-            const secundary_banner = document.getElementById('secundary_banner')
-            secundary_banner.style.backgroundPosition = `center ${scrollY * 0.6}px`
-        }
-        window.addEventListener('scroll', handleScroll)
+            const scrollY = window.scrollY;
+            const secundary_banner = document.getElementById('secundary_banner');
+            secundary_banner.style.backgroundPosition = `center ${scrollY * 0.6}px`;
+        };
+        window.addEventListener('scroll', handleScroll);
         return () => {
-            window.removeEventListener('scroll', handleScroll)
-        }
-    }, [])
+            window.removeEventListener('scroll', handleScroll);
+        };
+    }, []);
 
     return(
 
@@ -43,6 +43,6 @@ export default function DevsHome () {
                       
         </div>
 
-    )
+    );
 
-}
+};

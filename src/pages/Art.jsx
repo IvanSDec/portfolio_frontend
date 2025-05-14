@@ -6,6 +6,6 @@ export default function Art () {
             <h3 className="text-2xl">Arte</h3>
         </div>
 
-    )
+    );
 
-}
+};

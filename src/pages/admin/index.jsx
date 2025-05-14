@@ -1,12 +1,12 @@
 import { useSelector } from 'react-redux';
-import NavBar from "../../components/Admin/NavBar"
-import WelcomeAdmin from "../../components/Admin/Welcome"
-import Skills from "../../components/Admin/Skills"
-import Proyects from "../../components/Admin/Proyects"
+import NavBar from "../../components/Admin/NavBar";
+import WelcomeAdmin from "../../components/Admin/Welcome";
+import Skills from "../../components/Admin/Skills";
+import Proyects from "../../components/Admin/Proyects";
 import Information from '../../components/Admin/Information';
 
 export default function Admin () {
-    const principal = useSelector((state) => state.principal)
+    const principal = useSelector((state) => state.principal);
 
     return(
 
@@ -24,6 +24,6 @@ export default function Admin () {
 
         </div>
 
-    )
+    );
 
-}
+};

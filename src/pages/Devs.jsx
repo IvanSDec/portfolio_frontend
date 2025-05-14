@@ -6,6 +6,6 @@ export default function Devs () {
             <h3 className="text-2xl ">Desarrollos</h3>
         </div>
 
-    )
+    );
 
-}
+};

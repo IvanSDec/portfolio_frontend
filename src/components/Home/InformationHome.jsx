@@ -1,13 +1,13 @@
-import { BackgroundGray, TextGolden, TextWhite } from "../Global/Colors"
+import { BackgroundGray, TextGolden, TextWhite } from "../Global/Colors";
 
 const skills = [
     'React', 'Python', 'Node', 'Github', 'Blender', 'HTML', 'CSS', 'SASS', 'AWS',
     'DJANGO', 'Sequelize', 'SQL Server', 'Postgres', 'MySQL', 'GIT', 'Jira', 'Adobe XD', 
     'Libreria Office', 'Figma', 'Trello'
-]
+];
 
 export default function InformationHome() {
-    const randomDelay = () => `${Math.random() * 3 + 1}s`
+    const randomDelay = () => `${Math.random() * 3 + 1}s`;
     
 	return (
 		
@@ -27,7 +27,7 @@ export default function InformationHome() {
             <div className="w-full md:w-1/2 h-auto md:h-[80vh] flex justify-end items-center flex-col p-[40px]">
 
                 <div className="w-full h-auto text-center p-4">
-                    <h2 className="text-gold-neon font-bold text-[60px] font-bebas">Tabla de skills</h2>
+                    <h2 className="text-gold-neon font-bold text-[60px] font-bebas">Skills</h2>
                 </div>
 
                 <div className="w-full max-w-[400px] h-auto flex flex-wrap gap-3 justify-center items-center ">
@@ -48,6 +48,6 @@ export default function InformationHome() {
 
 		</div>
 
-	)
+	);
 
-}
+};

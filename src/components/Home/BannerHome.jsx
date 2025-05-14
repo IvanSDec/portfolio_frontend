@@ -1,21 +1,21 @@
-import React, { useEffect } from 'react'
-import { Link } from 'react-router-dom'
-import { TextGolden, TextWhite, BorderGolden, BackgroundGoldenLigth } from '../Global/Colors'
-import Blackout from './GlobalHome/Blackout'
+import React, { useEffect } from 'react';
+import { Link } from 'react-router-dom';
+import { TextGolden, TextWhite, BorderGolden, BackgroundGoldenLigth } from '../Global/Colors';
+import Blackout from './GlobalHome/Blackout';
 
 export default function BannerHome() {
 
     useEffect(() => {
         const handleScroll = () => {
-            const scrollY = window.scrollY
-            const banner = document.getElementById('banner')
-            banner.style.backgroundPosition = `center ${scrollY * 0.6}px`
-        }
-        window.addEventListener('scroll', handleScroll)
+            const scrollY = window.scrollY;
+            const banner = document.getElementById('banner');
+            banner.style.backgroundPosition = `center ${scrollY * 0.6}px`;
+        };
+        window.addEventListener('scroll', handleScroll);
         return () => {
-            window.removeEventListener('scroll', handleScroll)
-        }
-    }, [])
+            window.removeEventListener('scroll', handleScroll);
+        };
+    }, []);
 
     return (
 
@@ -32,8 +32,8 @@ export default function BannerHome() {
             <Blackout />
 
             <div className="z-10 relative bottom-0 text-center md:text-left mt-[50px] w-full">
-                <h1 className={`${TextWhite} md:text-[80px] font-bebas text-[50px] mt-[10px] w-full`}>{`DESARROLLADOR WEB`}</h1>
-                <h1 className={`${TextWhite} md:text-[80px] font-bebas text-[50px] mt-[10px] w-full`}>{`& ARTISTA 3D`}</h1>
+                <h1 className={`${TextWhite} md:text-[80px] font-bebas text-[50px] mt-[10px] w-full`}>{`DESARROLLADOR & DISEÑADOR`}</h1>
+                <h1 className={`${TextWhite} md:text-[80px] font-bebas text-[50px] mt-[10px] w-full`}>{`WEB`}</h1>
             </div>
 
             <div className='relative transform md:absolute md:bottom-[200px] md:right-[250px] w-full md:w-fit flex justify-center items-center'>
@@ -46,6 +46,6 @@ export default function BannerHome() {
 
         </div>
 
-    )
+    );
 
-}
+};

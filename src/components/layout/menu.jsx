@@ -1,28 +1,28 @@
-import { useState, useEffect } from 'react'
-import { useLocation } from 'react-router-dom'
-import { Link } from 'react-router-dom'
+import { useState, useEffect } from 'react';
+import { useLocation } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 
 export default function Menu() {
-    const [hidden, setHidden] = useState(false)
-    let lastScrollY = 0
-    const location = useLocation()
+    const [hidden, setHidden] = useState(false);
+    let lastScrollY = 0;
+    const location = useLocation();
 
     useEffect(() => {
         const handleScroll = () => {
             if (window.scrollY > lastScrollY) {
-                setHidden(true)
+                setHidden(true);
             } else {
                 setHidden(false);
             }
-            lastScrollY = window.scrollY
-        }
-        window.addEventListener('scroll', handleScroll)
+            lastScrollY = window.scrollY;
+        };
+        window.addEventListener('scroll', handleScroll);
         return () => {
-            window.removeEventListener('scroll', handleScroll)
-        }
-    }, [])
+            window.removeEventListener('scroll', handleScroll);
+        };
+    }, []);
 
-    const isActive = (path) => location.pathname === path ? 'border-b-2 border-yellow-500 text-yellow-500' : 'text-black'
+    const isActive = (path) => location.pathname === path ? 'border-b-2 border-yellow-500 text-yellow-500' : 'text-black';
 
     return (
 
@@ -40,7 +40,7 @@ export default function Menu() {
                 </div>
                 <h3 className="text-black text-md font-jura font-semibold">IVÁN S. CARRILLO</h3> 
                 <h3 className="text-black text-xl font-jura font-semibold"> | </h3>
-                <h3 className="text-black text-md font-jura font-extrabold"> CRECE. AVANZA. TRASCIENDE. </h3>
+                <h3 className="text-black text-md font-jura font-extrabold uppercase"> Funciona bonito o no funciona.</h3>
             </div>
 
             <div className='flex justify-center items-center gap-[20px]'>
@@ -53,16 +53,21 @@ export default function Menu() {
                 <Link to='/devs'>
                     <div className={`text-xl font-jura font-bold ${isActive('/devs')}`}>DESARROLLOS</div>
                 </Link>
-               
+
                 <h3 className="text-black text-xl font-jura font-bold"> | </h3>
-                <Link to='/art'>
-                    <div className={`text-xl font-jura font-bold ${isActive('/art')}`}>ARTE 3D</div>
+                <Link to='/experience'>
+                    <div className={`text-xl font-jura font-bold ${isActive('/experience')}`}>EXPERIENCIA</div>
+                </Link>
+
+                <h3 className="text-black text-xl font-jura font-bold"> | </h3>
+                <Link to='/contact'>
+                    <div className={`text-xl font-jura font-bold ${isActive('/contact')}`}>CONTACTO</div>
                 </Link>
 
             </div>
             
         </menu>
 
-    )
+    );
 
-}
+};
