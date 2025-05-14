@@ -39,7 +39,7 @@ export default function BannerHome() {
             <div className='relative transform md:absolute md:bottom-[200px] md:right-[250px] w-full md:w-fit flex justify-center items-center'>
                 <Link to='/cv'>
                     <div class={`${TextGolden} ${BorderGolden} ${BackgroundGoldenLigth} text-center mt-[200px] md:mt-0 text-lg md:text-2xl border-2 border-solid w-fit rounded-xl px-7 py-2`}>
-                        ¡ Descarga mi CV !
+                        <h3 className='text-yellow-500'>¡ Descarga mi CV !</h3>
                     </div>
                 </Link>
             </div>

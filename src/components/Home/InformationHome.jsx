@@ -16,7 +16,7 @@ export default function InformationHome() {
             <div className="w-full md:w-1/2 h-auto md:h-full">
 
                 <div className="w-full h-auto md:max-w-[600px] mr-0">
-                    <h2 className={`${TextGolden} text-[40px] md:text-[60px] mb-14 font-bebas w-full text-center md:text-start`}>Hola, mi nombre es Iván Sánchez Carrillo</h2>
+                    <h2 className={`text-yellow-500 text-[40px] md:text-[60px] mb-14 font-bebas w-full text-center md:text-start`}>Hola, mi nombre es Iván Sánchez Carrillo</h2>
                     <p className={`${TextWhite} text-md mb-4 font-jura md:max-w-[500px] text-center md:text-start`}><span className="font-bold">Desarrollador Web Fullstack y artista 3D</span>, tengo una gran pasión por la tecnología en general, lo que provocó mi gusto y fascinación por el desarrollo de aplicaciones web y modelado 3D.</p>
                     <p className={`${TextWhite} text-md mb-4 font-jura md:max-w-[500px] text-center md:text-start`}>Mi compromiso y trabajo me han llevado a colaborar en distintas empresas a lo largo de mi carrera profesional, donde he aprendido diversas tecnologías y metodologías de trabajo.</p>
                     <p className={`${TextWhite} text-md mb-4 font-jura md:max-w-[500px] text-center md:text-start`}>He participado en diferentes proyectos, siempre aportando con profesionalismo y una gran empatía para apoyar a los equipos de trabajo.</p>
