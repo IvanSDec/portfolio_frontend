@@ -1,112 +1,53 @@
-/**
- * @component Footer
- * @description Componente que representa el pie de página de la aplicación.
- * Incluye información de copyright, enlaces a redes sociales y un lema.
- * Los iconos de redes sociales tienen un efecto interactivo que combina:
- * - Un gradiente espacial (azul-morado-rosa) que aparece al hover
- * - Una animación de escala suave
- * - Transiciones fluidas en todos los efectos
- * 
- * @author Iván Sánchez
- * @returns {JSX.Element} Pie de página con información de contacto y redes sociales
- */
-import { BackgroundGray } from "../Global/Colors";
 import { FaInstagram } from "react-icons/fa";
-import { CiFacebook } from "react-icons/ci";
-import { FaSquareXTwitter } from "react-icons/fa6";
+import { CiFacebook, CiLinkedin } from "react-icons/ci";
 import { Link } from 'react-router-dom';
 
 export default function Footer () {
     return(
-        /**
-         * @section Footer Principal
-         * @description Contenedor principal del pie de página
-         * - text-white: Color de texto blanco
-         * - text-center: Alineación centrada del contenido
-         * - p-6: Padding en todos los lados
-         * - BackgroundGray: Fondo gris del sistema de colores global
-         */
-        <footer className={` text-white text-center p-6 ${BackgroundGray}`}>
-            {/* 
-             * @section Contenedor de Contenido
-             * @description Contenedor con ancho máximo y centrado
-             * - container: Ancho máximo responsivo
-             * - mx-auto: Centrado horizontal
-             */}
+        <footer className={`text-white text-center p-6 bg-gradient-to-r from-slate-900 via-blue-900 to-slate-900 relative z-10 border-t-2 border-cyan-400/50 shadow-2xl shadow-cyan-500/20 backdrop-blur-sm`}>
+          
             <div className="container mx-auto">
-                {/* 
-                 * @section Copyright
-                 * @description Información de copyright y derechos
-                 * - text-lg: Tamaño de texto grande
-                 * - font-semibold: Peso de fuente semi-negrita
-                 */}
-                <p className="text-lg font-semibold">© 2025 Iván Sánchez — Desarrollo y Modelado</p>
-                
-                {/* 
-                 * @section Redes Sociales
-                 * @description Contenedor de enlaces a redes sociales con efectos interactivos
-                 * 
-                 * @structure
-                 * Cada enlace contiene:
-                 * 1. Un contenedor con posicionamiento relativo y grupo
-                 * 2. Un div absoluto con el gradiente espacial
-                 * 3. El icono con posicionamiento relativo
-                 * 
-                 * @effects
-                 * - Gradiente espacial: Aparece al hover (opacity-0 a opacity-100)
-                 * - Escala del icono: Aumenta ligeramente al hover (scale-110)
-                 * - Transiciones: Duración de 300ms para todos los efectos
-                 * 
-                 * @gradient
-                 * Colores del gradiente espacial:
-                 * - Inicio: Azul (from-blue-500)
-                 * - Medio: Morado (via-purple-500)
-                 * - Final: Rosa (to-pink-500)
-                 * 
-                 * @note Todos los enlaces se abren en nueva pestaña con seguridad
-                 * @note Los iconos mantienen su visibilidad sobre el gradiente
-                 */}
-                <div className="flex justify-center gap-4 mt-3">
+              
+                <p className="text-lg font-semibold font-sans text-cyan-100 drop-shadow-sm">© 2025 Iván Sánchez — Desarrollo y Modelado</p>
+            
+                <div className="flex justify-center gap-6 mt-4">
                     <Link 
                         to={'https://www.instagram.com/ivanscarrillomx/'}
                         target="_blank" 
                         rel="noopener noreferrer"
-                        className="relative group"
+                        className="relative group transition-all duration-300 hover:scale-110 p-3 rounded-lg hover:bg-cyan-400/10 hover:shadow-lg hover:shadow-cyan-400/30"
                     >
-                        <div className="absolute inset-0 bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500 opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-full"></div>
-                        <FaInstagram className="relative text-white text-2xl transition-transform duration-300 group-hover:scale-110" />
+                        <div className="absolute inset-0 bg-gradient-to-r from-transparent via-cyan-400/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-lg"></div>
+                        <FaInstagram className="relative text-cyan-400 text-2xl transition-all duration-300 group-hover:scale-110 group-hover:text-cyan-300 drop-shadow-lg" />
                     </Link>
 
                     <Link 
                         to={'https://www.facebook.com/profile.php?id=100001168921982'}
                         target="_blank" 
                         rel="noopener noreferrer"
-                        className="relative group"
+                        className="relative group transition-all duration-300 hover:scale-110 p-3 rounded-lg hover:bg-cyan-400/10 hover:shadow-lg hover:shadow-cyan-400/30"
                     >
-                        <div className="absolute inset-0 bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500 opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-full"></div>
-                        <CiFacebook className="relative text-white text-2xl transition-transform duration-300 group-hover:scale-110" />
+                        <div className="absolute inset-0 bg-gradient-to-r from-transparent via-cyan-400/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-lg"></div>
+                        <CiFacebook className="relative text-cyan-400 text-2xl transition-all duration-300 group-hover:scale-110 group-hover:text-cyan-300 drop-shadow-lg" />
                     </Link>
 
                     <Link 
-                        to={'https://x.com/IvnSnch64591889'}
+                        to={'https://www.linkedin.com/in/iv%C3%A1n-s-carrillo-a92663322/'}
                         target="_blank" 
                         rel="noopener noreferrer"
-                        className="relative group"
+                        className="relative group transition-all duration-300 hover:scale-110 p-3 rounded-lg hover:bg-cyan-400/10 hover:shadow-lg hover:shadow-cyan-400/30"
                     >
-                        <div className="absolute inset-0 bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500 opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-full"></div>
-                        <FaSquareXTwitter className="relative text-white text-2xl transition-transform duration-300 group-hover:scale-110" />
+                        <div className="absolute inset-0 bg-gradient-to-r from-transparent via-cyan-400/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-lg"></div>
+                        <CiLinkedin className="relative text-cyan-400 text-2xl transition-all duration-300 group-hover:scale-110 group-hover:text-cyan-300 drop-shadow-lg" />
                     </Link>
                 </div>
-                
-                {/* 
-                 * @section Lema
-                 * @description Frase descriptiva de la empresa
-                 * - mt-3: Margen superior
-                 * - text-sm: Tamaño de texto pequeño
-                 * - opacity-70: Opacidad reducida para énfasis visual
-                 */}
-                <p className="mt-3 text-sm opacity-70">Construyendo soluciones con tecnología y eficiencia.</p>
+
+                <p className="mt-4 text-sm opacity-70 font-sans text-cyan-200/80 drop-shadow-sm">Construyendo soluciones con tecnología y eficiencia.</p>
+            
             </div>
+
         </footer>
+
     );
+
 };

@@ -2,36 +2,33 @@
 @tailwind components;
 @tailwind utilities;
 
-/* Estilos globales para la barra de scroll */
 ::-webkit-scrollbar {
     width: 6px;
 }
 
 ::-webkit-scrollbar-track {
-    background: rgba(17, 24, 39, 0.7); /* Color gris oscuro semi-transparente que combina con bg-gray-700 */
-    border-radius: 3px;
+    background: rgba(17, 24, 39, 0.7);
 }
 
 ::-webkit-scrollbar-thumb {
-    background: linear-gradient(to bottom, #3B82F6, #8B5CF6, #EC4899);
+    background: linear-gradient(to bottom, #3B82F6, #0f92c5, #0065fd);
     border-radius: 3px;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-    background: linear-gradient(to bottom, #2563EB, #7C3AED, #DB2777);
+    background: linear-gradient(to bottom, #3B82F6, #0f92c5, #0065fd);
 }
 
-/* Para Firefox */
 * {
     scrollbar-width: thin;
-    scrollbar-color: #8B5CF6 rgba(17, 24, 39, 0.7);
+    scrollbar-color: #0f92c5 rgba(17, 24, 39, 0.7);
 }
 
 *{
     margin: 0;
     padding: 0;
     gap: 0;
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: "Pixelify Sans", sans-serif;
     /* border: 1px solid red; */
 }
 
@@ -50,6 +47,62 @@ button {
     outline: none; 
     box-shadow: none; 
     cursor: pointer; 
+}
+
+.perspective-1000 {
+    perspective: 1000px;
+}
+
+.transform-style-preserve-3d {
+    transform-style: preserve-3d;
+}
+
+.backface-hidden {
+    backface-visibility: hidden;
+}
+
+.rotate-y-180 {
+    transform: rotateY(180deg);
+}
+
+.text-shadow-neon {
+    text-shadow: 
+        0 0 5px currentColor,
+        0 0 10px currentColor,
+        0 0 15px currentColor,
+        0 0 20px #00f5ff,
+        0 0 35px #00f5ff,
+        0 0 40px #00f5ff;
+}
+
+@keyframes spin-slow {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+.animate-spin-slow {
+    animation: spin-slow 8s linear infinite;
+}
+
+.parallax-container {
+    position: relative;
+    overflow: hidden;
+}
+
+.parallax-bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url('/public/img/arcade.jpg') no-repeat center center;
+    background-size: cover;
+    background-attachment: fixed;
+    z-index: 0;
 }
 
 .navbar {
