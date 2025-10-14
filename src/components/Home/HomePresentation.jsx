@@ -60,7 +60,9 @@ export default function HomePresentation() {
                 <div className="absolute top-4 left-4 w-4 h-4 bg-red-500 rounded-full shadow-lg shadow-red-500/50"></div>
                 <div className="absolute top-4 right-4 w-4 h-4 bg-green-500 rounded-full shadow-lg shadow-green-500/50"></div>
                 
-                <p className="text-cyan-400 text-3xl text-center mb-8 font-bold relative z-10">Me encanta la programación, la arquitectura de software y el mantenimiento de hardware.</p>
+                <p className="text-cyan-400 text-3xl text-center mb-8 font-bold relative z-10">
+                  Apasionado por la programación, la arquitectura de software y el mantenimiento de hardware.
+                </p>
                 
                 <button 
                   onClick={() => setIsFlipped(true)}
