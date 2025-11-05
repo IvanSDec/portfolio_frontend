@@ -1,15 +1,15 @@
-export default function Information () {
-    
-    return(
+export default function Information() {
 
-        <div className="mx-[120px] w-[calc(100%-200px)] bg-white rounded-md p-[40px] h-[96vh] relative">
+	return (
 
-            <div className="welcome_admin w-full h-full absolute top-0 left-0 opacity-[0.15] z-0"></div>
-            
-            <h1 className="text-2xl "><span className="font-bold">Información</span></h1>
+		<div className="mx-4 md:mx-12 lg:mx-20 w-auto bg-gray-900 rounded-md p-6 md:p-10 h-auto min-h-[96vh] relative ">
 
-        </div>
+			<div className="welcome_admin w-full h-full absolute top-0 left-0 opacity-[0.15] z-0"></div>
 
-    );
+			<h2 className="text-3xl md:text-4xl text-white font-sans mb-6">Información</h2>
+
+		</div>
+
+	);
 
 };

@@ -1,5 +1,41 @@
+import { useState, useRef } from "react";
+
 export default function HomeWork() {
 
+  const gifs = [
+    "/gif/autos.gif",
+    "/gif/luchas.gif",
+    "/gif/space.gif",
+    "/gif/carreras.gif",
+    "/gif/contra.gif",
+    "/gif/luchas2.gif",
+    "/gif/pacman.gif",
+  ];
+
+  const lastUsed = useRef({});
+  const [hovered, setHovered] = useState({ id: null, src: null });
+
+  const pickNonRepeating = (id) => {
+    if (!gifs.length) return null;
+    let attempt = 0;
+    let src = gifs[Math.floor(Math.random() * gifs.length)];
+    while (src === lastUsed.current[id] && attempt < 6) {
+      src = gifs[Math.floor(Math.random() * gifs.length)];
+      attempt++;
+    }
+    lastUsed.current[id] = src;
+    return src;
+  };
+
+  const handleMouseEnter = (id) => {
+    const src = pickNonRepeating(id);
+    if (src) setHovered({ id, src });
+  };
+
+  const handleMouseLeave = () => {
+    setHovered({ id: null, src: null });
+  };
+ 
   const projects = [
     {
       id: 1,
@@ -80,19 +116,34 @@ export default function HomeWork() {
             const colors = getColorClasses(project.color);
             
             return (
-              <div key={project.id} className="relative group">
+              <div
+                key={project.id}
+                className="relative group"
+                onMouseEnter={() => handleMouseEnter(project.id)}
+                onMouseLeave={handleMouseLeave}
+              >
                 
-                <div className={`relative bg-gradient-to-b ${colors.bg} rounded-t-3xl rounded-b-lg border-4 ${colors.border} shadow-2xl ${colors.shadow} overflow-hidden transform hover:scale-105 transition-all duration-300`}>
+                 <div className={`relative bg-gradient-to-b ${colors.bg} rounded-t-3xl rounded-b-lg border-4 ${colors.border} shadow-2xl ${colors.shadow} overflow-hidden transform hover:scale-105 transition-all duration-300`}>
                   
                   <div className="relative h-48 bg-black/80 m-4 rounded-lg border-2 border-gray-600 overflow-hidden">
-                    <div className="absolute inset-2 bg-gradient-to-br from-gray-900 to-black rounded border border-gray-500">
+                    <div className="absolute inset-2 rounded border border-gray-500 overflow-hidden">
+
+                      {hovered.id === project.id && hovered.src && (
+                        <img
+                          src={hovered.src}
+                          alt="arcade-gif"
+                          className="absolute inset-0 w-full h-full object-cover opacity-95 pointer-events-none z-0"
+                        />
+                      )}
+
+                      <div className="absolute inset-0 bg-gradient-to-br from-gray-900/70 to-black/60 pointer-events-none z-0"></div>
                       
-                      <div className="absolute top-2 left-2 flex gap-2">
+                      <div className="absolute top-2 left-2 flex gap-2 z-10">
                         <div className={`w-3 h-3 rounded-full ${colors.led1} animate-pulse`}></div>
                         <div className={`w-3 h-3 rounded-full ${colors.led2} animate-pulse`}></div>
                       </div>
                       
-                      <div className="p-4 h-full flex flex-col justify-center">
+                      <div className="p-4 h-full flex flex-col justify-center relative z-10">
                         <h3 className={`${colors.text} text-xl font-bold uppercase tracking-wide mb-2 text-center`}>
                           {project.title}
                         </h3>
@@ -100,10 +151,13 @@ export default function HomeWork() {
                           [{project.status}]
                         </div>
                       </div>
+
                     </div>
+
                   </div>
 
                   <div className="p-6">
+
                     <p className="text-gray-300 text-sm mb-4 leading-relaxed">
                       {project.description}
                     </p>
@@ -127,13 +181,18 @@ export default function HomeWork() {
                     <button className={`w-full relative bg-gradient-to-b ${colors.button} text-white py-3 px-6 rounded-full text-sm font-bold uppercase tracking-wide border-4 shadow-lg active:scale-95 transition-all duration-200 before:absolute before:inset-0 before:rounded-full before:bg-gradient-to-t before:from-transparent before:to-white/20 before:pointer-events-none after:absolute after:inset-2 after:rounded-full after:border after:border-white/30 after:pointer-events-none`}>
                       🎮 Ver Proyecto 🎮
                     </button>
+
                   </div>
 
                   <div className={`h-4 bg-gradient-to-b from-gray-700 to-gray-900 border-t-2 ${colors.border}`}></div>
                 </div>
+
               </div>
+
             );
+
           })}
+
         </div>
 
         <div className="text-center mt-16">
@@ -144,9 +203,11 @@ export default function HomeWork() {
             </span>
           </p>
         </div>
+
       </div>
+
     </div>
     
   );
 
-}
+};

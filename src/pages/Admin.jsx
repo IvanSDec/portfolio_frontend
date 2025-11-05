@@ -1,34 +1,33 @@
 /**
  * @component Admin
- * @description Componente principal del panel de administración.
- * Renderiza diferentes secciones basadas en el estado de navegación
- * almacenado en Redux. Incluye una barra de navegación y contenido
- * dinámico según la sección seleccionada.
- * 
+ * @description Pagina principal del administrador
  * @author Iván Sánchez
- * @returns {JSX.Element} Panel de administración con navegación y contenido dinámico
- */
+*/
 import { useSelector } from 'react-redux';
-import NavBar from "../components/Admin/NavBar";
+import NavBar from '../components/Admin/Layout/NavBar';
 import WelcomeAdmin from "../components/Admin/Welcome";
 import Skills from "../components/Admin/Skills";
-import Proyects from "../components/Admin/Proyects";
+import Projects from "../components/Admin/Projects";
 import Information from '../components/Admin/Information';
+import MenuResponsive from '../components/Admin/Layout/MenuResponsive';
+import Enterprices from '../components/Admin/Enterprices';
 
 export default function Admin () {
     const principal = useSelector((state) => state.principal);
 
     return(
 
-        <div className="w-full h-full bg-gray-400 min-h-[100vh] pt-[10px]">
+        <div className="w-full h-full bg-black min-h-[100vh] pt-[10px] pb-10 font-sans">
 
             <NavBar />
+            <MenuResponsive />
 
             { 
                 principal.stateAdmin === '' ? <WelcomeAdmin /> 
                 : principal.stateAdmin === 'skills' ?  <Skills /> 
-                : principal.stateAdmin === 'proyects' ? <Proyects /> 
+                : principal.stateAdmin === 'projects' ? <Projects /> 
                 : principal.stateAdmin === 'information' ? <Information /> 
+                : principal.stateAdmin === 'company' ? <Enterprices /> 
                 : <></>
             }
 

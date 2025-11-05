@@ -5,7 +5,7 @@ export default function HomePresentation() {
   const cardRef = useRef(null);
 
   const handleDownloadCV = () => {
-    console.log('Descargando CV...');
+    console.info('Descargando CV...');
   };
 
   const handleFlipBack = (e) => {

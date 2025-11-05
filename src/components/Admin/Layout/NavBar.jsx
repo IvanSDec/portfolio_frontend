@@ -1,13 +1,13 @@
 import { useSelector, useDispatch } from 'react-redux';
-import { setOpen, setStateAdmin } from '../../redux/principalSlice';
+import { setOpen, setStateAdmin } from '../../../redux/principalSlice';
 import { useRef, useEffect } from 'react';
 import { FaFolderOpen } from "react-icons/fa6";
 import { GiSkills } from "react-icons/gi";
 import { IoIosInformationCircle } from "react-icons/io";
-import { FaQuestionCircle } from "react-icons/fa";
 import { FaBuildingUser } from "react-icons/fa6";
 import { IoMenu } from "react-icons/io5";
 import { IoIosHome } from "react-icons/io";
+import { ImExit } from "react-icons/im";
 
 export default function NavBar() {
 	const principal = useSelector((state) => state.principal);
@@ -35,30 +35,30 @@ export default function NavBar() {
 		<div
 			ref={navRef}
 			className={`navbar ${principal.open ? "w-[70px]" : "w-[200px]"
-				} h-[100vh] bg-gray-200 px-[20px] py-[40px] overflow-hidden flex justify-between items-start flex-col fixed top-0 left-0`}
+				} h-[100vh] bg-gray-800 px-[20px] py-[40px] overflow-hidden lg:flex justify-between items-start flex-col fixed top-0 left-0 hidden`}
 		>
 
 			<button
 				className="flex justify-center items-center gap-3"
 				onClick={() => dispatch(setOpen(!principal.open))}
 			>
-				<IoMenu className="text-[25px]" />
-				{!principal.open && <h1 className="text-2xl text-pretty">Admin</h1>}
+				<IoMenu className="text-[25px] text-white" />
+				{!principal.open && <h1 className="text-2xl text-pretty text-white font-sans">Admin</h1>}
 			</button>
 
 			<div className="navbar-content flex justify-start items-start flex-col gap-[20px]">
 
 				<button
 					onClick={() => principal.stateAdmin === '' ? dispatch(setStateAdmin('')) : dispatch(setStateAdmin('')) }
-					className="text-xl flex justify-center items-center gap-2 hover:text-sky-600"
+					className="text-xl flex justify-center items-center gap-2 hover:text-sky-600 text-white font-sans" 
 				>
 					<IoIosHome className="text-xl" />
 					{!principal.open && "Home"}
 				</button>
 
 				<button
-					onClick={() => principal.stateAdmin === 'proyects' ? dispatch(setStateAdmin('')) : dispatch(setStateAdmin('proyects')) }
-					className="text-xl flex justify-center items-center gap-2 hover:text-sky-600"
+					onClick={() => principal.stateAdmin === 'projects' ? dispatch(setStateAdmin('')) : dispatch(setStateAdmin('projects')) }
+					className="text-xl flex justify-center items-center gap-2 hover:text-sky-600 text-white font-sans"
 				>
 					<FaFolderOpen className="text-xl" />
 					{!principal.open && "Proyectos"}
@@ -66,7 +66,7 @@ export default function NavBar() {
 
 				<button
 					onClick={() => principal.stateAdmin === 'skills' ? dispatch(setStateAdmin('')) : dispatch(setStateAdmin('skills')) }
-					className="text-xl flex justify-center items-center gap-2 hover:text-sky-600"
+					className="text-xl flex justify-center items-center gap-2 hover:text-sky-600 font-sans text-white"
 				>
 					<GiSkills className="text-xl" />
 					{!principal.open && "Skills"}
@@ -74,7 +74,7 @@ export default function NavBar() {
 
 				<button
 					onClick={() => principal.stateAdmin === 'information' ? dispatch(setStateAdmin('')) : dispatch(setStateAdmin('information')) }
-					className="text-xl flex justify-center items-center gap-2 hover:text-sky-600"
+					className="text-xl flex justify-center items-center gap-2 hover:text-sky-600 font-sans text-white" 
 				>
 					<IoIosInformationCircle className="text-xl" />
 					{!principal.open && "Información"}
@@ -82,7 +82,7 @@ export default function NavBar() {
 
 				<button
 					onClick={() => principal.stateAdmin === 'company' ? dispatch(setStateAdmin('')) : dispatch(setStateAdmin('company')) }
-					className="text-xl flex justify-center items-center gap-2 hover:text-sky-600"
+					className="text-xl flex justify-center items-center gap-2 hover:text-sky-600 font-sans text-white"
 				>
 					<FaBuildingUser className="text-xl" />
 					{!principal.open && "Empresas"}
@@ -92,11 +92,11 @@ export default function NavBar() {
 
 			<div className="navbar-content flex justify-start items-start flex-col gap-5">
 				<button
-					onClick={() => principal.stateAdmin === 'faqs' ? dispatch(setStateAdmin('')) : dispatch(setStateAdmin('faqs')) }
-					className="text-xl flex justify-center items-center gap-2 hover:text-sky-600"
+					onClick={() => console.log('end-session') }
+					className="text-xl flex justify-center items-center gap-2 hover:text-sky-600	 font-sans text-red-500"
 				>
-					<FaQuestionCircle />
-					{!principal.open && "FAQs"}
+					<ImExit className='text-xl' />
+					{!principal.open && "Salir"}
 				</button>
 			</div>
 

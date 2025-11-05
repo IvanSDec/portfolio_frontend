@@ -1,53 +1,61 @@
 /**
- * @file main.jsx
+ * @component main.jsx
  * @description Punto de entrada principal de la aplicación React.
- * Configura el enrutamiento, el store de Redux y la estructura base de la aplicación.
- * Define las rutas principales y el layout compartido.
- * 
  * @author Iván Sánchez
- */
+*/
 import ReactDOM from 'react-dom/client';
-import { BrowserRouter, Routes, Route, Outlet } from 'react-router-dom';
+import { BrowserRouter, Routes, Route, Outlet, Navigate } from 'react-router-dom';
+import { Provider } from 'react-redux';
+import store from './redux/store';
 import Home from './pages/Home';
 import Login from './pages/Login';
 import Admin from './pages/Admin';
-import { Provider } from 'react-redux';
-import store from './redux/store';
-import './index.css';
+import Work from './pages/Work';
+import Trial from './pages/Trial';
+import NotFound from './pages/NotFound';
 import Menu from './components/layout/menu';
 import Footer from './components/layout/footer';
-import NotFound from './pages/NotFound';
-import Work from './pages/Work';
+import ProtectedRoute from './config/ProtectedRoute';
+import './index.css';
 
 const Layout = () => (
-	<div className="w-full h-auto">
-		<Menu />
-		<Outlet />
-		<Footer />
-	</div>
+  <div className="w-full h-auto">
+    <Menu />
+    <Outlet />
+    <Footer />
+  </div>
 );
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 
 root.render(
+  <Provider store={store}>
+    <BrowserRouter future={{ v7_startTransition: true, v7_relativeSplatPath: true }}>
+      <Routes>
 
-	<Provider store={store}>
+        {/* 🏠 Rutas abiertas */}
+        <Route path="/" element={<Layout />}>
+          <Route index element={<Home />} />
+          <Route path="work" element={<Work />} />
+        </Route>
 
-		<BrowserRouter future={{ v7_startTransition: true, v7_relativeSplatPath: true }}>
+        {/* 🔐 Login y errores */}
+        <Route path="/login" element={<Login />} />
+        <Route path="/notFound" element={<NotFound />} />
 
-			<Routes>
-				<Route path="/" element={<Layout />}>
-					<Route index element={<Home />} />
-				</Route>
+        {/* 🔒 Admin - solo rol 1 */}
+        <Route element={<ProtectedRoute requiredRole={1} />}>
+          <Route path="/admin" element={<Admin />} />
+        </Route>
 
-				<Route path="/work" element={<Layout />}>
-					<Route index element={<Work />} />
-				</Route>
+        {/* 🔒 Trial - solo rol 2 */}
+        <Route element={<ProtectedRoute requiredRole={2 && 1} />}>
+          <Route path="/trial" element={<Trial />} />
+        </Route>
 
-				<Route path="/notFound" element={<NotFound />} />
-				<Route path="/login" element={<Login />} />
-				<Route path="/admin" element={<Admin />} />
-			</Routes>
-		</BrowserRouter>
-	</Provider>
+        {/* Redirección si no coincide ninguna ruta */}
+        <Route path="*" element={<Navigate to="/notFound" replace />} />
+      </Routes>
+    </BrowserRouter>
+  </Provider>
 );
