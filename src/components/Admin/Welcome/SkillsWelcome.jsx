@@ -1,3 +1,14 @@
+/**
+ * ═══════════════════════════════════════════════════════════════════════
+ * 🎨 SKILLS WELCOME COMPONENT - BIENVENIDA A HABILIDADES 🎨
+ * ═══════════════════════════════════════════════════════════════════════
+ * 
+ * 🔒 FUNCIONALIDAD:
+ *    • Muestra una tarjeta de bienvenida para la sección de habilidades.
+ * 
+ * 👨‍💻 Autor: Iván Sánchez
+ * ═══════════════════════════════════════════════════════════════════════
+*/
 export default function SkillsWelcome () {
 
     return(

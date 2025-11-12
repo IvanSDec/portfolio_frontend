@@ -1,21 +1,22 @@
-import { configureStore } from '@reduxjs/toolkit';
-import principalSlice from './principalSlice';
+import ProjectsPresentation from "../components/Projects/ProjectsPresentation";
+import ProjectCards from "../components/Projects/ProjectCards";
 
 /**
  * ═══════════════════════════════════════════════════════════════════════
- * 🎨 REDUX STORE - CONFIGURACIÓN DE LA TIENDA 🎨
+ * 🎨 PROJECTS COMPONENT - PÁGINA DE PROYECTOS 🎨
  * ═══════════════════════════════════════════════════════════════════════
  * 
  * 🔒 FUNCIONALIDAD:
- *    • Configura y exporta la tienda de Redux para el manejo del estado global.
+ *    • Mostrar presentación y tarjetas de proyectos
  * 
  * 👨‍💻 Autor: Iván Sánchez
  * ═══════════════════════════════════════════════════════════════════════
 */
-const store = configureStore({
-	reducer: {
-		principal: principalSlice, 
-	},
-});
-
-export default store;
+export default function Projects() {
+  return (
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-gray-900 to-black">
+      <ProjectsPresentation />
+      <ProjectCards />
+    </div>
+  );
+}

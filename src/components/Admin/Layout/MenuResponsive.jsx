@@ -7,6 +7,17 @@ import { FaBuildingUser } from "react-icons/fa6";
 import { IoIosHome } from "react-icons/io";
 import { ImExit } from "react-icons/im";
 
+/**
+ * ═══════════════════════════════════════════════════════════════════════
+ * 🎨 MENU RESPONSIVE ADMIN COMPONENT - MENÚ RESPONSIVE 🎨
+ * ═══════════════════════════════════════════════════════════════════════
+ * 
+ * 🔒 FUNCIONALIDAD:
+ *    • Menú de navegación inferior para dispositivos móviles en el panel de admin.
+ * 
+ * 👨‍💻 Autor: Iván Sánchez
+ * ═══════════════════════════════════════════════════════════════════════
+*/
 export default function MenuResponsive() {
   const principal = useSelector((state) => state.principal);
   const dispatch = useDispatch();

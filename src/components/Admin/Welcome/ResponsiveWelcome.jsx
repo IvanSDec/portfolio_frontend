@@ -2,6 +2,17 @@ import { MdVerified } from "react-icons/md";
 import { useSelector, useDispatch } from "react-redux";
 import { setStateAdmin } from "../../../redux/principalSlice";
 
+/**
+ * ═══════════════════════════════════════════════════════════════════════
+ * 🎨 RESPONSIVE WELCOME COMPONENT - BIENVENIDA RESPONSIVE 🎨
+ * ═══════════════════════════════════════════════════════════════════════
+ * 
+ * 🔒 FUNCIONALIDAD:
+ *    • Muestra enlaces rápidos para la vista responsive en el panel de admin.
+ * 
+ * 👨‍💻 Autor: Iván Sánchez
+ * ═══════════════════════════════════════════════════════════════════════
+*/
 export default function ResponsiveWelcome() {
   const principal = useSelector((state) => state.principal);
   const dispatch = useDispatch();

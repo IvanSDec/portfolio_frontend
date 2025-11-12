@@ -1,5 +1,16 @@
 import { createSlice } from '@reduxjs/toolkit';
 
+/**
+ * ═══════════════════════════════════════════════════════════════════════
+ * 🎨 PRINCIPAL SLICE - ESTADO PRINCIPAL 🎨
+ * ═══════════════════════════════════════════════════════════════════════
+ * 
+ * 🔒 FUNCIONALIDAD:
+ *    • Define el estado inicial y los reducers para la sección principal de la UI.
+ * 
+ * 👨‍💻 Autor: Iván Sánchez
+ * ═══════════════════════════════════════════════════════════════════════
+*/
 const principalSlice = createSlice({
 	name: 'principal',
 	initialState: {

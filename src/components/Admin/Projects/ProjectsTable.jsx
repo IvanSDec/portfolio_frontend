@@ -1,57 +1,108 @@
 import { Eye, Trash2 } from "lucide-react";
 
+/**
+ * ═══════════════════════════════════════════════════════════════════════
+ * 🎨 PROJECTS TABLE COMPONENT - TABLA DE PROYECTOS 🎨
+ * ═══════════════════════════════════════════════════════════════════════
+ *
+ * 🔒 FUNCIONALIDAD:
+ * • Muestra una tabla con la lista de proyectos.
+ * • Proporciona botones para ver/editar y eliminar cada proyecto.
+ *
+ * 👨‍💻 Autor: Iván Sánchez
+ * ═══════════════════════════════════════════════════════════════════════
+ */
 export default function ProjectsTable({ projects, onEdit, onDelete }) {
   return (
     <div className="overflow-x-auto">
-      <table className="w-full text-left border-collapse border border-gray-700">
-        <thead className="bg-gray-800">
-          <tr>
-            <th className="p-3 border border-gray-700 font-sans">Imagen</th>
-            <th className="p-3 border border-gray-700 font-sans">Nombre</th>
-            <th className="p-3 border border-gray-700 font-sans">Empresa</th>
-            <th className="p-3 border border-gray-700 font-sans">Estatus</th>
-            <th className="p-3 border border-gray-700 font-sans">Fecha</th>
-            <th className="p-3 border border-gray-700 font-sans">Tiempo</th>
-            <th className="p-3 border border-gray-700 text-center font-sans">Acciones</th>
-          </tr>
-        </thead>
-        <tbody>
-          {projects.map((p) => (
-            <tr key={p.id} className="hover:bg-gray-800">
-              <td className="p-3 border border-gray-700">
-                <img
-                  src={p.imagen}
-                  alt={p.nombre}
-                  className="w-16 h-16 object-cover rounded-md font-sans"
-                />
-              </td>
-              <td className="p-3 border border-gray-700 font-sans">{p.nombre}</td>
-              <td className="p-3 border border-gray-700 font-sans">{p.empresa}</td>
-              <td className="p-3 border border-gray-700 font-sans">{p.estatus}</td>
-              <td className="p-3 border border-gray-700 font-sans">{p.fecha}</td>
-              <td className="p-3 border border-gray-700 font-sans">{p.tiempo}</td>
-              <td className="p-3 border border-gray-700 text-center font-sans">
-                <button
-                  className="inline-flex items-center gap-1 px-3 py-1 bg-blue-600 rounded-md hover:bg-blue-500 transition-all mr-2 font-sans"
-                  onClick={() => {
-                    onEdit(p);
-                  }}
-                >
-                  <Eye size={16} /> Ver
-                </button>
-                <button
-                  className="font-sans inline-flex items-center gap-1 px-3 py-1 bg-red-600 rounded-md hover:bg-red-500 transition-all"
-                  onClick={() => {
-                    onDelete(p);
-                  }}
-                >
-                  <Trash2 size={16} /> Eliminar
-                </button>
-              </td>
+      <div className="min-w-full border border-cyan-500/30 rounded-lg overflow-hidden shadow-lg shadow-cyan-500/10">
+        <table className="w-full text-left border-collapse">
+          <thead className="bg-gradient-to-r from-slate-800 to-slate-900 border-b border-cyan-500/30">
+            <tr>
+              <th className="p-4 font-mono text-xs uppercase tracking-wider text-cyan-400">
+                Imagen
+              </th>
+              <th className="p-4 font-mono text-xs uppercase tracking-wider text-cyan-400">
+                Nombre
+              </th>
+              <th className="p-4 font-mono text-xs uppercase tracking-wider text-cyan-400">
+                Empresa
+              </th>
+              <th className="p-4 font-mono text-xs uppercase tracking-wider text-cyan-400">
+                Estatus
+              </th>
+              <th className="p-4 font-mono text-xs uppercase tracking-wider text-cyan-400">
+                Fecha
+              </th>
+              <th className="p-4 font-mono text-xs uppercase tracking-wider text-cyan-400">
+                Tiempo
+              </th>
+              <th className="p-4 font-mono text-xs uppercase tracking-wider text-cyan-400 text-center">
+                Acciones
+              </th>
             </tr>
-          ))}
-        </tbody>
-      </table>
+          </thead>
+          <tbody className="bg-slate-900/50">
+            {projects.map((p) => (
+              <tr
+                key={p.id}
+                className="border-b border-slate-700/50 hover:bg-slate-800/50 transition-all duration-300 group"
+              >
+                <td className="p-4">
+                  <img
+                    src={p.imagen}
+                    alt={p.nombre}
+                    className="w-16 h-16 object-cover rounded-lg border-2 border-slate-700 group-hover:border-cyan-500/50 transition-all duration-300 shadow-lg"
+                  />
+                </td>
+                <td className="p-4 font-mono text-sm text-slate-300">
+                  {p.nombre}
+                </td>
+                <td className="p-4 font-mono text-sm text-slate-400">
+                  {p.empresa}
+                </td>
+                <td className="p-4">
+                  <span
+                    className={`font-mono text-xs px-3 py-1 rounded-full ${
+                      p.estatus === "Terminado"
+                        ? "bg-green-500/20 text-green-400 border border-green-500/30"
+                        : "bg-yellow-500/20 text-yellow-400 border border-yellow-500/30"
+                    }`}
+                  >
+                    {p.estatus}
+                  </span>
+                </td>
+                <td className="p-4 font-mono text-sm text-slate-400">
+                  {p.fecha}
+                </td>
+                <td className="p-4 font-mono text-sm text-slate-400">
+                  {p.tiempo}
+                </td>
+                <td className="p-4 text-center">
+                  <div className="flex justify-center gap-2">
+                    <button
+                      className="inline-flex items-center gap-1.5 px-3 py-1.5 bg-blue-600/20 border border-blue-500/30 rounded-lg hover:bg-blue-600/30 hover:border-blue-400/50 transition-all text-blue-400 font-mono text-xs uppercase tracking-wider shadow-lg shadow-blue-500/10 hover:shadow-blue-500/20"
+                      onClick={() => {
+                        onEdit(p);
+                      }}
+                    >
+                      <Eye size={14} /> Ver
+                    </button>
+                    <button
+                      className="inline-flex items-center gap-1.5 px-3 py-1.5 bg-red-600/20 border border-red-500/30 rounded-lg hover:bg-red-600/30 hover:border-red-400/50 transition-all text-red-400 font-mono text-xs uppercase tracking-wider shadow-lg shadow-red-500/10 hover:shadow-red-500/20"
+                      onClick={() => {
+                        onDelete(p);
+                      }}
+                    >
+                      <Trash2 size={14} /> Eliminar
+                    </button>
+                  </div>
+                </td>
+              </tr>
+            ))}
+          </tbody>
+        </table>
+      </div>
     </div>
-  );  
+  );
 }

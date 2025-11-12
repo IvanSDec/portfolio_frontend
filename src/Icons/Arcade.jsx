@@ -1,3 +1,14 @@
+/**
+ * ═══════════════════════════════════════════════════════════════════════
+ * 🎨 ARCADE ICON COMPONENT - ICONO DE ARCADE 🎨
+ * ═══════════════════════════════════════════════════════════════════════
+ * 
+ * 🔒 FUNCIONALIDAD:
+ *    • Muestra un icono SVG de una máquina de arcade.
+ * 
+ * 👨‍💻 Autor: Iván Sánchez
+ * ═══════════════════════════════════════════════════════════════════════
+*/
 export default function Arcade(props) {
   return (
     <svg

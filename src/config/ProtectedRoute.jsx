@@ -2,6 +2,17 @@ import { useEffect, useState } from "react";
 import { Navigate, Outlet } from "react-router-dom";
 import APIClient from "../api/API"; 
 
+/**
+ * ═══════════════════════════════════════════════════════════════════════
+ * 🎨 PROTECTED ROUTE COMPONENT - RUTA PROTEGIDA 🎨
+ * ═══════════════════════════════════════════════════════════════════════
+ * 
+ * 🔒 FUNCIONALIDAD:
+ *    • Protege rutas verificando la autenticación y el rol del usuario.
+ * 
+ * 👨‍💻 Autor: Iván Sánchez
+ * ═══════════════════════════════════════════════════════════════════════
+*/
 const ProtectedRoute = ({ requiredRole }) => {
   const [isLoading, setIsLoading] = useState(true);
   const [authorized, setAuthorized] = useState(false);
@@ -16,7 +27,6 @@ const ProtectedRoute = ({ requiredRole }) => {
           headers: { Authorization: `Bearer ${token}` },
         });
         const user = res.user;
-        // Validar rol real del backend
         if (requiredRole && user.rol !== requiredRole) {
           setAuthorized(false);
         } else {

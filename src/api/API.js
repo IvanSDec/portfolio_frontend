@@ -1,23 +1,22 @@
-/**
- * @component API.js
- * @description Configuracion de APIS usadas en toda la página
- * @author Iván Sánchez
-*/
 import axios from "axios";
 import Swal from "sweetalert2";
 
-/* ==========================================================================
-  🔑 MANEJO DE TOKEN
-  ========================================================================== */
+/**
+ * ═══════════════════════════════════════════════════════════════════════
+ * 🎨 API CLIENT - CONFIGURACIÓN DE API 🎨
+ * ═══════════════════════════════════════════════════════════════════════
+ * 
+ * 🔒 FUNCIONALIDAD:
+ *    • Configura el cliente Axios para las peticiones a la API.
+ *    • Maneja la autenticación (tokens) y los errores de forma centralizada.
+ * 
+ * 👨‍💻 Autor: Iván Sánchez
+ * ═══════════════════════════════════════════════════════════════════════
+*/
 export const getToken = () => localStorage.getItem("auth_token");
 export const setToken = (token) => localStorage.setItem("auth_token", token);
 export const removeToken = () => localStorage.removeItem("auth_token");
 
-/**
- * Retorna configuración de headers con token incluido
- * @param {Object} [config={}] - Configuración adicional
- * @returns {Object} Configuración completa para axios
-*/
 export const withAuth = (config = {}) => {
 	const token = getToken();
 	return {
@@ -29,18 +28,11 @@ export const withAuth = (config = {}) => {
 	};
 };
 
-/* ==========================================================================
-   ⚙️ CONFIGURACIÓN GENERAL DEL CLIENTE AXIOS
-   ========================================================================== */
 const API = axios.create({
 	baseURL: import.meta.env.VITE_BASE_URL_API || "http://localhost:3001/api/v1",
 	timeout: 15000,
 });
 
-/**
- * Muestra un error global con SweetAlert2
- * @param {Error} err - Error lanzado por Axios
-*/
 const showError = (err) => {
 	const message =
 		err.response?.data?.error ||
@@ -57,9 +49,6 @@ const showError = (err) => {
 	});
 };
 
-/* ==========================================================================
-   🔧 CONTROLADOR DE PETICIONES
-   ========================================================================== */
 const handleRequest = async (promise, { swalError = true } = {}) => {
 	try {
 		const res = await promise;
@@ -70,9 +59,6 @@ const handleRequest = async (promise, { swalError = true } = {}) => {
 	}
 };
 
-/* ==========================================================================
-   📦 ENDPOINTS ORGANIZADOS POR RECURSO
-   ========================================================================== */
 const APIClient = {
 	auth: {
 		login: async (credentials) =>
